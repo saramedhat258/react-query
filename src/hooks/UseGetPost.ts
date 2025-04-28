@@ -24,7 +24,7 @@ const UseGetPost = (id: string, paramKey: string, paramType: string): UseQueryRe
                 return undefined
             }
             else {
-                const data=cachedData.data.find(e=>e.id===+id)
+                const data=cachedData?.data?.find(e=>e.id===+id)
                 console.log(data)
                 return data
             }
