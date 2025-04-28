@@ -59,7 +59,7 @@ function TableData({ selctedStatus, selectedQuery }: propType) {
                             return (
                                 <TableRow key={el.id}>
                                     <TableCell className="font-medium">{++index}</TableCell>
-                                    <TableCell><Link to='/info'>{el.title}</Link></TableCell>
+                                    <TableCell><Link to={`/info?id=${el.id}&type=paginate&key=${paginate}`}>{el.title}</Link></TableCell>
                                     <TableCell>{el.status}</TableCell>
                                     <TableCell><Switch checked={el.topRate} /></TableCell>
                                     <TableCell ><Button variant="destructive">delete</Button></TableCell>
@@ -70,7 +70,7 @@ function TableData({ selctedStatus, selectedQuery }: propType) {
                             return (
                                 <TableRow key={el.id}>
                                     <TableCell className="font-medium">{++index}</TableCell>
-                                    <TableCell><Link to='/info'>{el.title}</Link></TableCell>
+                                    <TableCell><Link to={`/info?id=${el.id}&type=search&key=${selectedQuery}`}>{el.title}</Link></TableCell>
                                     <TableCell>{el.status}</TableCell>
                                     <TableCell><Switch checked={el.topRate} /></TableCell>
                                     <TableCell ><Button variant="destructive">delete</Button></TableCell>
